@@ -1,18 +1,32 @@
 import * as S from "./Question.styles";
 
+import { ProgressBar, Button } from "react-bootstrap";
+
 export default function QuestionUI(props) {
+  // const [questionNo, setQuestionNo] = useState(0);
+
   return (
     <>
       <S.Wrapper>
-        {/* <ProgressBar
+        <ProgressBar
           variant="warning"
           animated
-          now={(questionNo / QuestionData.length) * 100}
+          // now={(questionNo / QuestionData.length) * 100}
           style={{
             width: "80%",
             marginTop: 20,
           }}
-        /> */}
+        />
+        <S.Title>질문</S.Title>
+        <S.BtnGroup>
+          <S.Btn>
+            <S.Answera>내용</S.Answera>
+          </S.Btn>
+          <S.Btn>
+            <S.Answera>내용</S.Answera>
+          </S.Btn>
+        </S.BtnGroup>
+
         {/* <S.ButtonGroup>
           <Button
             variant="warning"
