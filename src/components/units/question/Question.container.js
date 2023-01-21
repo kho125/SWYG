@@ -1,10 +1,12 @@
 import { useState } from "react";
 import QuestionUI from "./Question.presenter";
-// import { QuestionData } from "../../../../assets/data/questiondata";
-// import { createSearchParams } from "react-router-dom";
+import { QuestionData } from "../../../../assets/data/questiondata";
+import { createSearchParams } from "react-router-dom";
+import Router from "next/router";
 
 export default function Question() {
   const [questionNo, setQuestionNo] = useState(0);
+
   const [totalScore, setTotalScore] = useState([
     { id: "EI", score: 0 },
     { id: "SN", score: 0 },
@@ -26,7 +28,7 @@ export default function Question() {
           (curr.score >= 2 ? curr.id.substring(0, 1) : curr.id.substring(1, 2)),
         ""
       );
-      Navigate({
+      Router.push({
         pathname: "/mbti/result",
         search: `?${createSearchParams({
           mbti: mbti,
@@ -40,6 +42,7 @@ export default function Question() {
       handleClickAnswer={handleClickAnswer}
       questionNo={questionNo}
       totalScore={totalScore}
+      QuestionData={QuestionData}
     />
   );
 }
