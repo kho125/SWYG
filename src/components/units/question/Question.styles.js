@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.div`
   font-size: 30px;
+  text-align: center;
 `;
 
 export const BtnGroup = styled.div`

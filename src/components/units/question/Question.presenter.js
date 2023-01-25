@@ -1,38 +1,56 @@
 import * as S from "./Question.styles";
 
-import { ProgressBar } from "react-bootstrap";
+import { ProgressBar, Button } from "react-bootstrap";
 
 export default function QuestionUI(props) {
   return (
     <>
       <S.Wrapper>
         <ProgressBar
-          variant="warning"
-          animated
+          striped
+          variant="danger"
           now={(props.questionNo / props.QuestionData.length) * 100}
-          style={{
-            width: "80%",
-            marginTop: 20,
-          }}
+          style={{ marginTop: "20px" }}
+          // variant="warning"
+          // animated
+          // style={{
+          //   width: "80%",
+          //   marginTop: 20,
+          // }}
         />
-        <S.Title>질문</S.Title>
+        <S.Title>{props.QuestionData[props.questionNo].title}</S.Title>
         <S.BtnGroup>
-          <S.Btn
-            variant="warning"
+          <Button
+            style={{
+              width: "40%",
+              minHeigth: "200px",
+              fontSize: "15px",
+              marginRight: "20px",
+            }}
+            // variant="warning"
             onClick={() =>
-              handleClickAnswer(1, QuestionData[props.questionNo].type)
+              props.handleClickAnswer(
+                1
+                // props.QuestionData[props.questionNo].type
+              )
             }
           >
-            {props.QuestionData[props.questionNo]}
-          </S.Btn>
-          <S.Btn
-            variant="warning"
+            {/* {props.QuestionData[props.questionNo]} */}
+            {props.QuestionData[props.questionNo].answera}
+          </Button>
+          <Button
+            style={{ width: "40%", minHeigth: "200px", fontSize: "15px" }}
+            // variant="warning"
             onClick={() =>
-              handleClickAnswer(1, QuestionData[props.questionNo].type)
+              props.handleClickAnswer(
+                1
+                // props.QuestionData[props.questionNo].type
+              )
             }
           >
-            {props.QuestionData[props.questionNo]}
-          </S.Btn>
+            {/* {props.QuestionData[props.questionNo]} */}
+            {props.QuestionData[props.questionNo].answerb}
+          </Button>
         </S.BtnGroup>
 
         {/* <S.ButtonGroup>

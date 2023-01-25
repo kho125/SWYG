@@ -6,6 +6,7 @@ import Router from "next/router";
 
 export default function Question() {
   const [questionNo, setQuestionNo] = useState(0);
+  console.log("questionNo", questionNo);
 
   const [totalScore, setTotalScore] = useState([
     { id: "EI", score: 0 },
