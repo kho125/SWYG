@@ -6,12 +6,12 @@ export default function NarrationStart1UI(props) {
       <S.Wrapper>
         <S.Bg>
           <S.AvatarWrapper>
-            <S.AvatarImage src="images/chat/doctor.svg" />
+            <S.AvatarImage src="/images/chat/doctor.svg" />
             <S.AvatarName>의사</S.AvatarName>
           </S.AvatarWrapper>
           <S.ChatWrapperLeft>
             <S.ChatWrapper>
-              <S.SmallAvatarImage src="images/chat//doctor.svg" />
+              <S.SmallAvatarImage src="/images/chat/doctor.svg" />
               <S.Flex>
                 <S.SmallAvatarName>의사</S.SmallAvatarName>
                 <S.ChatLeft>

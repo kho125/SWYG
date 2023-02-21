@@ -5,7 +5,7 @@ export default function NarrationStart1() {
   const router = useRouter();
 
   const onClickMove = () => {
-    router.push("/narrationStart2");
+    router.push("/narrationStart/narrationStart2");
   };
 
   return <NarrationStart1UI onClickMove={onClickMove} />;

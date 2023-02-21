@@ -1,21 +1,34 @@
 import * as S from "./HaniChat.styles";
 
-export default function NarrationStart1UI(props) {
+export default function HaniChatUI(props) {
   return (
     <>
       <S.Wrapper>
         <S.Bg>
           <S.AvatarWrapper>
-            <S.AvatarImage src="/doctor.svg" />
+            <S.AvatarImage src="/images/chat/hani.svg" />
             <S.AvatarName>하니</S.AvatarName>
           </S.AvatarWrapper>
           <S.ChatWrapperLeft>
             <S.ChatWrapper>
-              <S.SmallAvatarImage src="/doctor.svg" />
+              <S.SmallAvatarImage src="/images/chat/hani.svg" />
               <S.Flex>
                 <S.SmallAvatarName>하니</S.SmallAvatarName>
                 <S.ChatLeft>
-                  상담사님,<br />지금 급한 환자들이 있는데,<br />연락 안받으시나요?? 
+                  안녕하세요 상담사님
+                </S.ChatLeft>
+              </S.Flex>
+            </S.ChatWrapper>
+          </S.ChatWrapperLeft>
+          <S.ChatWrapperLeft>
+            <S.ChatWrapper>
+              <S.SmallAvatarImage src="/images/chat/hani.svg" />
+              <S.Flex>
+                <S.SmallAvatarName>하니</S.SmallAvatarName>
+                <S.ChatLeft>
+                  저는 처음에는<br />
+                  어떤게 진짜 나인지<br /> 
+                  너무 혼란스러웠어요 
                 </S.ChatLeft>
               </S.Flex>
             </S.ChatWrapper>

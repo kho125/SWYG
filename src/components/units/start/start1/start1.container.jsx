@@ -5,7 +5,7 @@ export default function Start1() {
   const router = useRouter();
 
   const onClickMove = () => {
-    router.push("/start2");
+    router.push("/start/start2");
   };
 
   return <Start1UI onClickMove={onClickMove} />;

@@ -1,6 +1,6 @@
 import * as S from "./HaniStart.styles";
 
-export default function NarrationStart1UI(props) {
+export default function HaniStartUI(props) {
   return (
     <>
       <S.Wrapper>

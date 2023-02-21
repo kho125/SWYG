@@ -7,7 +7,7 @@ export default function ResultUI() {
     <>
       <S.Wrapper>
       <S.Bg>
-        <S.Image src="images/result/minji.svg" />
+        <S.Image src="/images/result/minji.svg" />
         <S.Name>민지</S.Name>
         <S.Narration>
           <p>당신이 현실로 구해온 멤버는 <br /><strong>민지</strong> 입니다!</p>

@@ -91,7 +91,7 @@ export const ChatWrapperRight = styled.div`
 
 export const ChatRight = styled.div`
   margin-bottom: 5px;
-  padding: 12px 25px 12px 12px;
+  padding: 12px 25px 12px 18px;
   width: 226px;
   height: 52px;
   background: #fff;
@@ -102,6 +102,7 @@ export const ChatRight = styled.div`
 
 export const ChatBtn = styled.button`
   display: block;
+  padding-left: 18px;
   margin: 5px 0;
   width: 226px;
   height: 63px;
@@ -110,4 +111,5 @@ export const ChatBtn = styled.button`
   border: 2px solid #000;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+  text-align: start;
 `;

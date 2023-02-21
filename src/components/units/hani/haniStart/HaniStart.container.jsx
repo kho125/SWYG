@@ -5,7 +5,7 @@ export default function HaniStart() {
   const router = useRouter();
 
   const onClickMove = () => {
-    router.push("/haniChat");
+    router.push("/hani/haniChat");
   };
 
   return <HaniStartUI onClickMove={onClickMove} />;
