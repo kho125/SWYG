@@ -75,7 +75,7 @@ export const SmallAvatarName = styled.div`
 export const ChatLeft = styled.div`
   padding: 12px 25px 12px 12px;
   width: 226px;
-  max-height: 104px;
+  max-height: 124px;
   background: #fff;
   border: 2px solid #000;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -116,4 +116,5 @@ export const ChatBtn = styled.button`
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   text-align: start;
+  white-space: pre-wrap;
 `;
