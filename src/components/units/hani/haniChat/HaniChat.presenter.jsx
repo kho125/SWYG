@@ -81,11 +81,11 @@ export default function HaniChatUI(props) {
   return (
     <>
       <S.Wrapper>
-        <S.Bg ref={scrollRef}>
-          <S.AvatarWrapper>
+      <S.AvatarWrapper>
             <S.AvatarImage src="/images/chat/hani.svg" />
             <S.AvatarName>하니</S.AvatarName>
           </S.AvatarWrapper>
+        <S.Bg ref={scrollRef}>
           <S.ChatWrapperLeft>
             <S.ChatWrapper>
               <S.SmallAvatarImage src="/images/chat/hani.svg" />

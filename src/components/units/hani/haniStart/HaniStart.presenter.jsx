@@ -1,4 +1,4 @@
-import * as S from "./HaniStart.styles";
+import * as S from "../../../../../styles/StartStyles";
 
 export default function HaniStartUI(props) {
   return (

@@ -18,11 +18,11 @@ export default function NarrationStart1UI(props) {
   return (
     <>
       <S.Wrapper>
-        <S.Bg>
-          <S.AvatarWrapper>
+      <S.AvatarWrapper>
             <S.AvatarImage src="/images/chat/doctor.svg" />
             <S.AvatarName>의사</S.AvatarName>
           </S.AvatarWrapper>
+        <S.Bg>
           <S.ChatWrapperLeft>
             <S.ChatWrapper>
               <S.SmallAvatarImage src="/images/chat/doctor.svg" />

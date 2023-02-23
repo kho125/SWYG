@@ -1,4 +1,4 @@
-import * as S from "./HyeinStart.styles";
+import * as S from "../../../../../styles/StartStyles";
 
 export default function HyeinStartUI(props) {
   return (

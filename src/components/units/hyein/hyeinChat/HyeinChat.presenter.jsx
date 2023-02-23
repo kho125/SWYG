@@ -81,11 +81,11 @@ export default function HyeinChatUI(props) {
   return (
     <>
       <S.Wrapper>
-        <S.Bg ref={scrollRef}>
-          <S.AvatarWrapper>
+      <S.AvatarWrapper>
             <S.AvatarImage src="/images/chat/hyein.svg" />
             <S.AvatarName>혜인</S.AvatarName>
           </S.AvatarWrapper>
+        <S.Bg ref={scrollRef}>
           <S.ChatWrapperLeft>
             <S.ChatWrapper>
               <S.SmallAvatarImage src="/images/chat/hyein.svg" />

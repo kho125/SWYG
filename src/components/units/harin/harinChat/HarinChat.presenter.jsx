@@ -80,11 +80,11 @@ export default function HarinChatUI(props) {
   return (
     <>
       <S.Wrapper>
-        <S.Bg ref={scrollRef}>
-          <S.AvatarWrapper>
+      <S.AvatarWrapper>
             <S.AvatarImage src="/images/chat/harin.svg" />
             <S.AvatarName>해린</S.AvatarName>
           </S.AvatarWrapper>
+        <S.Bg ref={scrollRef}>
           {
             harinQuestion.map((value, index ) => index <= step &&
             Question(index)  

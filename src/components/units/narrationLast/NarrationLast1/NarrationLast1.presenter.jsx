@@ -1,4 +1,4 @@
-import * as S from "./NarrationLast1.styles";
+import * as S from "../../../../../styles/StartStyles";
 
 export default function NarrationLast1UI(props) {
   return (
