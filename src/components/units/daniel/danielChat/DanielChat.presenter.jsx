@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import * as S from "./DanielChat.styles";
+import * as S from "../../../../../styles/ChatStyles";
 import { danielQuestion } from "../../../../Question";
 
 export default function HyeinChatUI(props) {
@@ -52,7 +52,7 @@ export default function HyeinChatUI(props) {
           {step === index && <S.ChatRight>당신의 대답은?</S.ChatRight>}
           {step === index ?
             <S.ChatBtn onClick={() =>
-              index === danielQuestion.length - 1 ? router.push("/narrationLast/narrationLast1") : selectChat(0)}>
+              index === danielQuestion.length - 1 ? router.push("/minji2/minji2Start") : selectChat(0)}>
               {danielQuestion[index].q1.str}
             </S.ChatBtn>
             :
@@ -63,7 +63,7 @@ export default function HyeinChatUI(props) {
           }
           {step === index ?
             <S.ChatBtn onClick={() =>
-              index === danielQuestion.length - 1 ? router.push("/narrationLast/narrationLast1") : selectChat(1)}>
+              index === danielQuestion.length - 1 ? router.push("/minji2/minji2Start") : selectChat(1)}>
               {danielQuestion[index].q2.str}
             </S.ChatBtn>
             : select[index] === 1 &&

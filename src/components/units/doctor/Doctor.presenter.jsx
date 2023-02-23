@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import * as S from "./Doctor.styles";
+import * as S from "../../../../styles/ChatStyles";
 
 export default function NarrationStart1UI(props) {
 

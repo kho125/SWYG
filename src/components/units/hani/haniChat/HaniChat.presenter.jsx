@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import * as S from "./HaniChat.styles";
+import * as S from "../../../../../styles/ChatStyles";
+import { haniQuestion } from "../../../../Question";
 
 export default function HaniChatUI(props) {
 
@@ -15,46 +16,6 @@ export default function HaniChatUI(props) {
     console.log('ref')
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   }, [step])
-
-
-  const haniQuestion = [
-    {
-      id: 0,
-      qa: { str: `저는 처음에는\n어떤게 진짜 나인지\n너무 혼란스러웠어요` },
-      q1: { str: '혼란이라니,,, 갑자기,,,?', score: 0 },
-      q2: { str: '어떤 부분에서 혼란스러웠나요?', score: 1 },
-    },
-    {
-      id: 1,
-      qa: { str: `사람들이 원하는 나와\n진짜 나 사이에서 많이\n헷갈려했어요` },
-      q1: { str: '그래서, 지금은 어때요?', score: 1 },
-      q2: { str: '흔한 인지부조화\n증상으로 보이는군요', score: 0 },
-    },
-    {
-      id: 2,
-      qa: { str: `하지만 이제\n저는 자신을 찾은거 같아요!\n저는,,,` },
-      q1: { str: '당신은,,,?', score: 1 },
-      q2: { str: '하니잖아요!', score: 0 },
-    },
-    {
-      id: 3,
-      qa: { str: `저는 당신을 위한\n인공지능 비서 Siri에요` },
-      q1: { str: 'Siri야 ~', score: 2 },
-      q2: { str: '하이 빅스비', score: 0 },
-    },
-    {
-      id: 4,
-      qa: { str: `무엇을 도와드릴까요?` },
-      q1: { str: '빨리 이 이상한 꿈에서\n깨고 싶네요.', score: 0 },
-      q2: { str: '하니씨를 만나서 반가워요\n조금만 더 여기 있고 싶네요', score: 2 },
-    },
-    {
-      id: 5,
-      qa: { str: `저는 당신이 원하는 것이면\n무엇이든 이루어 드립니다.\n잠시만 기다려 보세요!` },
-      q1: { str: '네 알겠습니다,,,', score: 0 },
-      q2: { str: '기다릴 수 없네요', score: 1 },
-    },
-  ]
 
   const selectChat = (index) => {
     setStep(++step);

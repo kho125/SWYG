@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import * as S from "./Minji2Chat.styles";
+import * as S from "../../../../../styles/ChatStyles";
 import { minjiQuestion } from "../../../../Question";
 
 export default function Minji2ChatUI(props) {
@@ -8,7 +8,7 @@ export default function Minji2ChatUI(props) {
 
   const [step, setStep] = useState(3);      // question step
   const [select, setSelect] = useState([]); // selected question index list
-  const [score, setScore] = useState(JSON.parse(router.query.minjiScore));    // add score
+  const [score, setScore] = useState(0);    // add score
 
   const scrollRef = useRef();
   useEffect(() => {

@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import * as S from "./HyeinChat.styles";
+import * as S from "../../../../../styles/ChatStyles";
+import { hyeinQuestion } from "../../../../Question";
 
 export default function HyeinChatUI(props) {
   const router = useRouter();
@@ -15,45 +16,6 @@ export default function HyeinChatUI(props) {
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   }, [step])
 
-
-  const hyeinQuestion = [
-    {
-      id: 0,
-      qa: { str: `저는 사실,,,` },
-      q1: { str: '신데렐라?', score: 1 },
-      q2: { str: '백설공주?', score: 0 },
-    },
-    {
-      id: 1,
-      qa: { str: `네 맞아요 !! 동화에 나오는 !!` },
-      q1: { str: '네 알겠습니다,,,', score: 0 },
-      q2: { str: '어쩐지 아름다우시더라!!', score: 1 },
-    },
-    {
-      id: 2,
-      qa: { str: `그런데 지금 혹시 시간이 어떻게 되나요?` },
-      q1: { str: '오후 12시요', score: 0 },
-      q2: { str: '오전 12시요', score: 2 },
-    },
-    {
-      id: 3,
-      qa: { str: `이미 늦었네요,,, 저는 이제 그만 빨리 가봐야해요` },
-      q1: { str: '어디를 가봐야 하죠?', score: 1 },
-      q2: { str: '갑자기 가시면 안됩니다!!', score: 0 },
-    },
-    {
-      id: 4,
-      qa: { str: `지하철 막차는 놓치면 안되잖아요!!` },
-      q1: { str: '네 알겠습니다,,,', score: 0 },
-      q2: { str: '공주님이 막차라니요?', score: 1 },
-    },
-    {
-      id: 5,
-      qa: { str: `결국엔 현실로 돌아가야 하잖아요` },
-      q1: { str: '저도 그렇구요', score: 0 },
-      q2: { str: '아무리 공주님이어도 현실로 돌아가야 하는군요', score: 2 },
-    },
-  ]
 
   const selectChat = (index) => {
     setStep(++step);

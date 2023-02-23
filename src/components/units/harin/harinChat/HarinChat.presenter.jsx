@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import * as S from "./HarinChat.styles";
+import * as S from "../../../../../styles/ChatStyles";
+import { harinQuestion } from "../../../../Question";
 
 export default function HarinChatUI(props) {
   const router = useRouter();
@@ -14,46 +15,6 @@ export default function HarinChatUI(props) {
     console.log('ref')
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   }, [step])
-
-
-  const harinQuestion = [
-    {
-      id: 0,
-      qa: { str: `야옹` },
-      q1: { str: '야옹??', score: 1 },
-      q2: { str: '멍멍!!', score: 0 },
-    },
-    {
-      id: 1,
-      qa: { str: `저는 이게 고민이예요,,, 사람들이 자꾸 저를 고양이인줄 알아요` },
-      q1: { str: '하지만,, 어느정도 닮은건 사실인걸요...', score: 2 },
-      q2: { str: '하지만,,해린씨는 사람이에요', score: 0 },
-    },
-    {
-      id: 2,
-      qa: { str: `그렇죠,,,츄르는 그냥 맛있어서 먹는거에요!!` },
-      q1: { str: '지금 무엇을 그리고 있나요?', score: 1 },
-      q2: { str: '손에 그거는 뭐에요?', score: 0 },
-    },
-    {
-      id: 3,
-      qa: { str: `이 노트요? 이건 그냥 아무것도 아닌데,,,` },
-      q1: { str: '저만 보여주세요!', score: 0 },
-      q2: { str: '비밀로 할게요!', score: 1 },
-    },
-    {
-      id: 4,
-      qa: { str: `그럼 비밀로 하기로 해요!! 상담사님만 보여드릴 거예요` },
-      q1: { str: '무슨 그림이죠?', score: 0 },
-      q2: { str: '귀여운 캐릭터들이군요', score: 1 },
-    },
-    {
-      id: 5,
-      qa: { str: `저는 그냥 창밖으로 보이는 걸 그린거예요 상담사님도 창밖에 저것들이 보이시나요?` },
-      q1: { str: '네 아주 잘 보이네요,,', score: 2 },
-      q2: { str: '아니요,, 보이지 않는걸요', score: 0 },
-    },
-  ]
 
   const selectChat = (index) => {
     setStep(++step);
