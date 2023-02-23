@@ -26,6 +26,7 @@ export const AvatarName = styled.div`
 export const Bg = styled.div`
   height: 90%;
   background: linear-gradient(#ffff05, rgba(245, 249, 71, 0) 55%);
+  overflow-y: scroll;
 `;
 
 export const Bottom = styled.div`

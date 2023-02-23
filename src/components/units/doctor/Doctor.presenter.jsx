@@ -1,6 +1,20 @@
+import { useRouter } from "next/router";
+import { useState } from "react";
 import * as S from "./Doctor.styles";
 
 export default function NarrationStart1UI(props) {
+
+  const router = useRouter();
+
+  const [step, setStep] = useState(0);      // question step
+  const [select, setSelect] = useState(-1); // selected question index
+
+  const selectChat = (index) => {
+    setStep(++step);
+    setSelect(index);
+    console.log(step, index);
+  }
+
   return (
     <>
       <S.Wrapper>
@@ -21,13 +35,14 @@ export default function NarrationStart1UI(props) {
             </S.ChatWrapper>
           </S.ChatWrapperLeft>
           <S.ChatWrapperRight>
-            <S.ChatRight>당신의 대답은?</S.ChatRight>
-            <S.ChatBtn>무슨,,, 환자요?</S.ChatBtn>
-            <S.ChatBtn>제가 상담사라구요,,,?</S.ChatBtn>
+            {step === 0 && <S.ChatRight>당신의 대답은?</S.ChatRight>}
+            {step === 0 ? <S.ChatBtn onClick={()=>selectChat(0)}>무슨,,, 환자요?</S.ChatBtn> : select === 0 && <S.ChatRight>무슨,,, 환자요?</S.ChatRight>}
+            {step === 0 ? <S.ChatBtn onClick={()=>selectChat(1)}>제가 상담사라구요,,,?</S.ChatBtn> : select === 1 && <S.ChatRight>제가 상담사라구요,,,?</S.ChatRight>}
           </S.ChatWrapperRight>
-          {/* <S.ChatWrapperLeft>
+          { step > 0 &&
+          <S.ChatWrapperLeft>
             <S.ChatWrapper>
-              <S.SmallAvatarImage src="/doctor.svg" />
+              <S.SmallAvatarImage src="/images/chat/doctor.svg" />
               <S.Flex>
                 <S.SmallAvatarName>의사</S.SmallAvatarName>
                 <S.ChatLeft>
@@ -35,7 +50,15 @@ export default function NarrationStart1UI(props) {
                 </S.ChatLeft>
               </S.Flex>
             </S.ChatWrapper>
-          </S.ChatWrapperLeft> */}
+          </S.ChatWrapperLeft>
+          }
+          {step > 0 &&
+            <S.ChatWrapperRight>
+            {step === 1 && <S.ChatRight>당신의 대답은?</S.ChatRight>}
+            {step === 1 && <S.ChatBtn onClick={() => router.push("/hani/haniStart")}>네 알겠습니다,,,</S.ChatBtn>}
+            {step === 1 && <S.ChatBtn onClick={() => router.push("/hani/haniStart")}>뭐라구요? 갑자기요?</S.ChatBtn>}
+          </S.ChatWrapperRight>
+          }
           </S.Bg>
         
         <S.Bottom>
