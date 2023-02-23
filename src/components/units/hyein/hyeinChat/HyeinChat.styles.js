@@ -26,6 +26,7 @@ export const AvatarName = styled.div`
 export const Bg = styled.div`
   height: 90%;
   background: linear-gradient(#ffff05, rgba(245, 249, 71, 0) 55%);
+  overflow-y: scroll;
 `;
 
 export const Bottom = styled.div`
@@ -74,11 +75,12 @@ export const SmallAvatarName = styled.div`
 export const ChatLeft = styled.div`
   padding: 12px 25px 12px 12px;
   width: 226px;
-  max-height: 104px;
+  max-height: 124px;
   background: #fff;
   border: 2px solid #000;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0 30px 30px 30px;
+  white-space:pre-wrap;
 `;
 
 export const ChatWrapperRight = styled.div`
@@ -94,11 +96,12 @@ export const ChatRight = styled.div`
   margin-bottom: 5px;
   padding: 12px 25px 12px 18px;
   width: 226px;
-  height: 52px;
+  max-height: 104px;
   background: #fff;
   border: 2px solid #000;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px 0 30px 30px;
+  white-space:pre-wrap;
 `;
 
 export const ChatBtn = styled.button`
@@ -113,4 +116,5 @@ export const ChatBtn = styled.button`
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   text-align: start;
+  white-space: pre-wrap;
 `;
