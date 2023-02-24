@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as S from "../../../../styles/ChatStyles";
 
 export default function NarrationStart1UI(props) {
@@ -12,7 +12,6 @@ export default function NarrationStart1UI(props) {
   const selectChat = (index) => {
     setStep(++step);
     setSelect(index);
-    console.log(step, index);
   }
 
   return (
@@ -61,7 +60,7 @@ export default function NarrationStart1UI(props) {
           }
           </S.Bg>
         
-        <S.Bottom>
+          <S.Bottom>
           <S.FirstBtn onClick={props.onClickMove}>처음으로</S.FirstBtn>
         </S.Bottom>
       </S.Wrapper>

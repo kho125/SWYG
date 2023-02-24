@@ -7,30 +7,49 @@ export default function HarinChatUI(props) {
   const router = useRouter();
 
   const [step, setStep] = useState(0);      // question step
-  const [select, setSelect] = useState([]); // selected question index list
-  const [score, setScore] = useState(0);    // add score
+  const [select, setSelect] = useState([]); // selected question score list
 
   const scrollRef = useRef();
   useEffect(() => {
-    console.log('ref')
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   }, [step])
 
   const selectChat = (index) => {
-    setStep(++step);
-    let _list = select;
-    _list.push(index)
-    setSelect(_list);
-
-    let _score;
+    setStep(step + 1);
+    let _select = select;
     if(index === 0) // up(q1) select
-     _score = score + harinQuestion[step].q1.score
+    {
+      _select.push(harinQuestion[step].q1.score)
+    }
     else            // down(q2) select
-     _score = score + harinQuestion[step].q2.score
+    {
+      _select.push(harinQuestion[step].q2.score)
+    }
 
-    setScore(_score);
+    setSelect(_select);
 
-    console.log(step, index, _score);
+    if(_select.length === harinQuestion.length)
+    {
+      let _score = 0;
+      for(let i = 0; i<_select.length; i++)
+      {
+        _score = _score + _select[i];
+      }
+      localStorage.setItem('harinScore', _score)
+      console.log(_score)
+      router.push('/daniel/danieltart')
+    }
+  }
+
+  const stepBack = () => {
+    if(step === 0) {
+      router.push('/harin/harinStart')
+    }
+
+    let _select = select;
+    _select.pop()
+    setSelect(_select);
+    setStep(step - 1)
   }
 
   function Question(index) {
@@ -50,8 +69,7 @@ export default function HarinChatUI(props) {
         <S.ChatWrapperRight>
           {step === index && <S.ChatRight>당신의 대답은?</S.ChatRight>}
           {step === index ?
-            <S.ChatBtn onClick={() =>
-              index === harinQuestion.length - 1 ? router.push("/daniel/danielStart") : selectChat(0)}>
+            <S.ChatBtn onClick={() => selectChat(0)}>
               {harinQuestion[index].q1.str}
             </S.ChatBtn>
             :
@@ -61,8 +79,7 @@ export default function HarinChatUI(props) {
             </S.ChatRight>
           }
           {step === index ?
-            <S.ChatBtn onClick={() =>
-              index === harinQuestion.length - 1 ? router.push("/daniel/danielStart") : selectChat(1)}>
+            <S.ChatBtn onClick={() => selectChat(1)}>
               {harinQuestion[index].q2.str}
             </S.ChatBtn>
             : select[index] === 1 &&
@@ -93,6 +110,7 @@ export default function HarinChatUI(props) {
         </S.Bg>
 
         <S.Bottom>
+          <S.FirstBtn onClick={() => stepBack()}>이전으로</S.FirstBtn>
           <S.FirstBtn onClick={props.onClickMove}>처음으로</S.FirstBtn>
         </S.Bottom>
       </S.Wrapper>

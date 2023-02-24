@@ -8,30 +8,49 @@ export default function HaniChatUI(props) {
   const router = useRouter();
 
   const [step, setStep] = useState(0);      // question step
-  const [select, setSelect] = useState([]); // selected question index list
-  const [score, setScore] = useState(0);    // add score
+  const [select, setSelect] = useState([]); // selected question score list
 
   const scrollRef = useRef();
   useEffect(() => {
-    console.log('ref')
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   }, [step])
 
   const selectChat = (index) => {
-    setStep(++step);
-    let _list = select;
-    _list.push(index)
-    setSelect(_list);
-
-    let _score;
+    setStep(step + 1);
+    let _select = select;
     if(index === 0) // up(q1) select
-     _score = score + haniQuestion[step].q1.score
+    {
+      _select.push(haniQuestion[step].q1.score)
+    }
     else            // down(q2) select
-     _score = score + haniQuestion[step].q2.score
+    {
+      _select.push(haniQuestion[step].q2.score)
+    }
 
-    setScore(_score);
+    setSelect(_select);
 
-    console.log(step, index, _score);
+    if(_select.length === haniQuestion.length)
+    {
+      let _score = 0;
+      for(let i = 0; i<_select.length; i++)
+      {
+        _score = _score + _select[i];
+      }
+      localStorage.setItem('haniScore', _score)
+      console.log(_score)
+      router.push('/minji/minjiStart')
+    }
+  }
+
+  const stepBack = () => {
+    if(step === 0) {
+      router.push('/hani/haniStart')
+    }
+
+    let _select = select;
+    _select.pop()
+    setSelect(_select);
+    setStep(step - 1)
   }
 
   function Question(index) {
@@ -51,8 +70,7 @@ export default function HaniChatUI(props) {
         <S.ChatWrapperRight>
           {step === index && <S.ChatRight>당신의 대답은?</S.ChatRight>}
           {step === index ?
-            <S.ChatBtn onClick={() =>
-              index === haniQuestion.length - 1 ? router.push("/minji/minjiStart") : selectChat(0)}>
+            <S.ChatBtn onClick={() => selectChat(0)}>
               {haniQuestion[index].q1.str}
             </S.ChatBtn>
             :
@@ -62,8 +80,7 @@ export default function HaniChatUI(props) {
             </S.ChatRight>
           }
           {step === index ?
-            <S.ChatBtn onClick={() =>
-              index === haniQuestion.length - 1 ? router.push("/minji/minjiStart") : selectChat(1)}>
+            <S.ChatBtn onClick={() => selectChat(1)}>
               {haniQuestion[index].q2.str}
             </S.ChatBtn>
             : select[index] === 1 &&
@@ -105,6 +122,7 @@ export default function HaniChatUI(props) {
         </S.Bg>
 
         <S.Bottom>
+          <S.FirstBtn onClick={() => stepBack()}>이전으로</S.FirstBtn>
           <S.FirstBtn onClick={props.onClickMove}>처음으로</S.FirstBtn>
         </S.Bottom>
       </S.Wrapper>

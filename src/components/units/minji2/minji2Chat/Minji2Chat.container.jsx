@@ -5,6 +5,7 @@ export default function Minji2Chat() {
   const router = useRouter();
 
   const onClickMove = () => {
+    localStorage.clear();
     router.push("/");
   };
 

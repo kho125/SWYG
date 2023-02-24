@@ -5,6 +5,7 @@ export default function HarinChat() {
   const router = useRouter();
 
   const onClickMove = () => {
+    localStorage.clear();
     router.push("/");
   };
 

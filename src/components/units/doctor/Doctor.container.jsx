@@ -5,6 +5,7 @@ export default function NarrationStart1() {
   const router = useRouter();
 
   const onClickMove = () => {
+    localStorage.clear();
     router.push("/");
   };
 

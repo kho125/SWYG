@@ -6,30 +6,52 @@ import { minjiQuestion } from "../../../../Question";
 export default function Minji2ChatUI(props) {
   const router = useRouter();
 
-  const [step, setStep] = useState(3);      // question step
-  const [select, setSelect] = useState([]); // selected question index list
-  const [score, setScore] = useState(0);    // add score
+  const [step, setStep] = useState(0);      // question step
+  const [select, setSelect] = useState([]); // selected question score list
 
   const scrollRef = useRef();
   useEffect(() => {
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   }, [step])
 
-
   const selectChat = (index) => {
-    setStep(++step);
-    let _list = select;
-    _list.push(index)
-    setSelect(_list);
-
-    let _score;
+    setStep(step + 1);
+    let _select = select;
     if(index === 0) // up(q1) select
-     _score = score + minjiQuestion[step].q1.score
+    {
+      _select.push(minjiQuestion[step].q1.score)
+    }
     else            // down(q2) select
-     _score = score + minjiQuestion[step].q2.score
+    {
+      _select.push(minjiQuestion[step].q2.score)
+    }
 
-    setScore(_score);
+    setSelect(_select);
+
+    if(step === 2)
+    {
+      let _score = JSON.parse(localStorage.getItem('minjiScore'));
+      for(let i = 0; i<_select.length; i++)
+      {
+        _score = _score + _select[i];
+      }
+      localStorage.setItem('minjiScore', _score)
+      console.log(_score)
+      router.push('/minji2Score/minji2Start')
+    }
   }
+
+  const stepBack = () => {
+    if(step === 0) {
+      router.push('/narrationLast/narrationLast1')
+    }
+
+    let _select = select;
+    _select.pop()
+    setSelect(_select);
+    setStep(step - 1)
+  }
+
 
   function Question(index) {
     return (
@@ -91,6 +113,7 @@ export default function Minji2ChatUI(props) {
         </S.Bg>
 
         <S.Bottom>
+          <S.FirstBtn onClick={() => stepBack()}>이전으로</S.FirstBtn>
           <S.FirstBtn onClick={props.onClickMove}>처음으로</S.FirstBtn>
         </S.Bottom>
       </S.Wrapper>

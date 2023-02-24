@@ -5,6 +5,7 @@ export default function DanielChat() {
   const router = useRouter();
 
   const onClickMove = () => {
+    localStorage.clear();
     router.push("/");
   };
 
