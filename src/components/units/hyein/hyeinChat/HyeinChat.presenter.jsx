@@ -37,7 +37,7 @@ export default function HyeinChatUI(props) {
       }
       localStorage.setItem('hyeinScore', _score)
       console.log(_score)
-      router.push('/harin/harintart')
+      router.push('/harin/harinStart')
     }
   }
 

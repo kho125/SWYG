@@ -28,7 +28,7 @@ export default function MinjiChatUI(props) {
 
     setSelect(_select);
 
-    if(step === 2)
+    if(_select.length === 3)
     {
       let _score = 0;
       for(let i = 0; i<_select.length; i++)

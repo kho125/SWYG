@@ -6,7 +6,7 @@ import { minjiQuestion } from "../../../../Question";
 export default function Minji2ChatUI(props) {
   const router = useRouter();
 
-  const [step, setStep] = useState(0);      // question step
+  const [step, setStep] = useState(3);      // question step
   const [select, setSelect] = useState([]); // selected question score list
 
   const scrollRef = useRef();
@@ -27,8 +27,8 @@ export default function Minji2ChatUI(props) {
     }
 
     setSelect(_select);
-
-    if(step === 2)
+    
+    if(_select.length === 3)
     {
       let _score = JSON.parse(localStorage.getItem('minjiScore'));
       for(let i = 0; i<_select.length; i++)
@@ -36,14 +36,13 @@ export default function Minji2ChatUI(props) {
         _score = _score + _select[i];
       }
       localStorage.setItem('minjiScore', _score)
-      console.log(_score)
-      router.push('/minji2Score/minji2Start')
+      router.push('/narrationLast/narrationLast1')
     }
   }
 
   const stepBack = () => {
     if(step === 0) {
-      router.push('/narrationLast/narrationLast1')
+      router.push('/minji2Score/minji2Start')
     }
 
     let _select = select;
@@ -70,8 +69,7 @@ export default function Minji2ChatUI(props) {
         <S.ChatWrapperRight>
           {step === index && <S.ChatRight>당신의 대답은?</S.ChatRight>}
           {step === index ?
-            <S.ChatBtn onClick={() =>
-              index === minjiQuestion.length - 1 ? router.push("/narrationLast/narrationLast1") : selectChat(0)}>
+            <S.ChatBtn onClick={() => selectChat(0)}>
               {minjiQuestion[index].q1.str}
             </S.ChatBtn>
             :
@@ -81,8 +79,7 @@ export default function Minji2ChatUI(props) {
             </S.ChatRight>
           }
           {step === index ?
-            <S.ChatBtn onClick={() =>
-              index === minjiQuestion.length - 1 ? router.push("/narrationLast/narrationLast1") : selectChat(1)}>
+            <S.ChatBtn onClick={() => selectChat(1)}>
               {minjiQuestion[index].q2.str}
             </S.ChatBtn>
             : select[index -  3] === 1 &&

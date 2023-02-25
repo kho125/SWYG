@@ -5,7 +5,19 @@ export default function NarrationStart2() {
   const router = useRouter();
 
   const onClickMove = () => {
-    router.push("/result");
+    const scoreList = [
+      JSON.parse(localStorage.getItem('haniScore')),
+      JSON.parse(localStorage.getItem('minjiScore')),
+      JSON.parse(localStorage.getItem('hyeinScore')),
+      JSON.parse(localStorage.getItem('harinScore')),
+      JSON.parse(localStorage.getItem('danielScore')),
+    ]
+    const maxValue = Math.max(...scoreList)
+    const memberIdx = scoreList.lastIndexOf(maxValue);
+
+    console.log(scoreList, maxValue, memberIdx);
+
+    router.push({pathname:"/result", query: {score:memberIdx}});
   };
 
   return <NarrationStart2UI onClickMove={onClickMove} />;

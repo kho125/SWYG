@@ -37,7 +37,7 @@ export default function HarinChatUI(props) {
       }
       localStorage.setItem('harinScore', _score)
       console.log(_score)
-      router.push('/daniel/danieltart')
+      router.push('/daniel/danielStart')
     }
   }
 
