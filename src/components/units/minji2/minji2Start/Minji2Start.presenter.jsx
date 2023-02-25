@@ -1,4 +1,5 @@
-import * as S from "../../../../../styles/StartStyles";
+// import * as S from "../../../../../styles/StartStyles";
+import * as S from "./Minji2Start.styles"
 
 export default function Minji2StartUI(props) {
   return (

@@ -25,6 +25,8 @@ export const NarrationBox = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  white-space: pre-wrap;
+  /* line-height: 50px; */
 `;
 
 export const Bottom = styled.div`

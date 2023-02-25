@@ -22,6 +22,11 @@ export const NarrationBox = styled.div`
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   text-align: start;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  white-space: pre-wrap;
+  line-height: 50px;
 `;
 
 export const Bottom = styled.div`

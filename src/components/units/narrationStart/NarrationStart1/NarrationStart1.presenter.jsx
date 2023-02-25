@@ -1,5 +1,6 @@
 import { useState } from "react";
-import * as S from "../../../../../styles/StartStyles";
+// import * as S from "../../../../../styles/StartStyles";
+import * as S from "./NarrationStart1.styles"
 import { prologue } from "../../../../Script";
 
 export default function NarrationStart1UI(props) {

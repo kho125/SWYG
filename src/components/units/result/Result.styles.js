@@ -7,13 +7,13 @@ export const Wrapper = styled.div`
 `;
 
 export const Bg = styled.div`
-  height: 80%;
+  height: 74%;
   background: linear-gradient(#478ef9 0, rgba(71, 142, 249, 0) 55%);
 `;
 
 export const Bottom = styled.div`
   padding-top: 50px;
-  height: 20%;
+  height: 26%;
   background: linear-gradient(#fff, #478ef9);
 `;
 

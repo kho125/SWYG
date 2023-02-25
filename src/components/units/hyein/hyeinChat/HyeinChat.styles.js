@@ -11,10 +11,10 @@ export const AvatarWrapper = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   height: 80px;
-  width:100%;
+  width: 100%;
   max-width: 500px;
   overflow: hidden;
 `;
@@ -35,29 +35,28 @@ export const Bg = styled.div`
   overflow-y: scroll;
   position: absolute;
   top: 80px;
-  bottom:80px;
-  left:0;
-  width:100%;
+  bottom: 80px;
+  left: 0;
+  width: 100%;
   max-width: 500px;
-  overflow-y:scroll;
+  overflow-y: scroll;
   padding: 10px;
 `;
 
 export const Bottom = styled.div`
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10%;
   background-color: #ffff05;
-  border-top: 2px solid #000; ;
-  width:100%;
+  border-top: 2px solid #000;
+  width: 100%;
   max-width: 500px;
   height: 10%;
   height: 80px;
   position: absolute;
-  left:0;
-  bottom:0;
+  left: 0;
+  bottom: 0;
 `;
 
 export const FirstBtn = styled.button`
@@ -102,7 +101,7 @@ export const ChatLeft = styled.div`
   border: 2px solid #000;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0 30px 30px 30px;
-  white-space:pre-wrap;
+  white-space: pre-wrap;
 `;
 
 export const ChatWrapperRight = styled.div`
@@ -123,7 +122,7 @@ export const ChatRight = styled.div`
   border: 2px solid #000;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px 0 30px 30px;
-  white-space:pre-wrap;
+  white-space: pre-wrap;
 `;
 
 export const ChatBtn = styled.button`

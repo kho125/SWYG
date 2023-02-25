@@ -38,21 +38,20 @@ export const Bottom = styled.div`
 `;
 
 export const StartBtn = styled.div`
-margin-left: 90px;
-margin-right: 90px;
-padding: 10px;
-background-color: #6180ed;
+  margin-left: 90px;
+  margin-right: 90px;
+  padding: 10px;
+  background-color: #6180ed;
   color: #f5f5f5;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   font-weight: 700;
   font-size: 20px;
   cursor: pointer;
-
-      transition: all 0.7s;
-@media (hover:hover) {
+  transition: all 0.7s;
+  @media (hover: hover) {
     :hover {
-        background-color:#01275c;
+      background-color: #01275c;
     }
-}
+  }
 `;

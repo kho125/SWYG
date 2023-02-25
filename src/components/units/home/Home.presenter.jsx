@@ -1,5 +1,5 @@
-//import * as S from "./Home.styles"
-import * as S from "../../../../styles/HomeStyles";
+import * as S from "./Home.styles"
+// import * as S from "../../../../styles/HomeStyles";
 
 export default function HomeUI(props) {
   return (
