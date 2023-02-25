@@ -3,12 +3,20 @@ import styled from "@emotion/styled";
 export const Wrapper = styled.div`
   max-width: 500px;
   height: 100vh;
+  background: linear-gradient(#ffff05, rgba(245, 249, 71, 0) 55%);
 `;
 
 export const AvatarWrapper = styled.div`
   padding: 34px 27px;
   display: flex;
   align-items: center;
+  position: absolute;
+  top:0;
+  left:0;
+  height: 80px;
+  width:100%;
+  max-width: 500px;
+  overflow: hidden;
 `;
 
 export const AvatarImage = styled.img`
@@ -24,18 +32,32 @@ export const AvatarName = styled.div`
 `;
 
 export const Bg = styled.div`
-  height: 90%;
-  background: linear-gradient(#ffff05, rgba(245, 249, 71, 0) 55%);
   overflow-y: scroll;
+  position: absolute;
+  top: 80px;
+  bottom:80px;
+  left:0;
+  width:100%;
+  max-width: 500px;
+  overflow-y:scroll;
+  padding: 10px;
 `;
 
 export const Bottom = styled.div`
+
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   height: 10%;
   background-color: #ffff05;
   border-top: 2px solid #000; ;
+  width:100%;
+  max-width: 500px;
+  height: 10%;
+  height: 80px;
+  position: absolute;
+  left:0;
+  bottom:0;
 `;
 
 export const FirstBtn = styled.button`

@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+//import * as S from "./HaniChat.styles"
 import * as S from "../../../../../styles/ChatStyles";
-import { haniQuestion } from "../../../../Question";
+import { haniQuestion } from "../../../../Script";
 
 export default function HaniChatUI(props) {
 

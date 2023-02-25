@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import * as S from "../../../../styles/ChatStyles";
+//import * as S from "./Doctor.styles"
 
 export default function NarrationStart1UI(props) {
 
@@ -17,7 +18,7 @@ export default function NarrationStart1UI(props) {
   return (
     <>
       <S.Wrapper>
-        <S.AvatarWrapper>
+      <S.AvatarWrapper>
           <S.AvatarImage src="/images/chat/doctor.svg" />
           <S.AvatarName>의사</S.AvatarName>
         </S.AvatarWrapper>

@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import * as S from "../../../../../styles/ChatStyles";
-import { minjiQuestion } from "../../../../Question";
+//import * as S from "./Minji2Chat.styles"
+import { minjiQuestion } from "../../../../Script";
 
 export default function Minji2ChatUI(props) {
   const router = useRouter();

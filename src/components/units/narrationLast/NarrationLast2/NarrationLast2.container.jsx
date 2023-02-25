@@ -17,7 +17,7 @@ export default function NarrationStart2() {
 
     console.log(scoreList, maxValue, memberIdx);
 
-    router.push({pathname:"/result", query: {score:memberIdx}});
+    router.push({pathname:"/result", query: {winner:memberIdx}});
   };
 
   return <NarrationStart2UI onClickMove={onClickMove} />;

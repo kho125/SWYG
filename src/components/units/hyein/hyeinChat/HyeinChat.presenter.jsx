@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import * as S from "../../../../../styles/ChatStyles";
-import { hyeinQuestion } from "../../../../Question";
+//import * as S from "./HyeinChat.styles"
+import { hyeinQuestion } from "../../../../Script";
 
 export default function HyeinChatUI(props) {
   const router = useRouter();
