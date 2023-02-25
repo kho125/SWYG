@@ -5,21 +5,34 @@ import Router, { useRouter } from "next/router";
 export default function ResultUI(props) {
   const router = useRouter();
 
+  function copyLink(){
+
+    let currentUrl = window.document.location.href;
+
+    let t = document.createElement("textarea");
+    document.body.appendChild(t);
+    t.value = currentUrl;
+    t.select();
+    document.execCommand('copy');
+    document.body.removeChild(t);
+
+}
+
   function Member() {
     let ko, en;
     var query = router.query;
     var winner = query.winner;
     switch(winner)
     {
-      case 0: ko = '하니'; en = 'hani';
+      case '0': ko = '하니'; en = 'hani';
       break
-      case 1: ko = '민지'; en = 'minji';
+      case '1': ko = '민지'; en = 'minji';
       break
-      case 2: ko = '혜인'; en = 'hyein';
+      case '2': ko = '혜인'; en = 'hyein';
       break
-      case 3: ko = '해린'; en = 'harin';
+      case '3': ko = '해린'; en = 'harin';
       break
-      case 4: ko = '다니엘'; en = 'daniel';
+      case '4': ko = '다니엘'; en = 'daniel';
       break
       default:
         ko = '민지'; en = 'minji';
@@ -45,7 +58,7 @@ export default function ResultUI(props) {
       <S.Wrapper>
         <Member/>
         <S.Bottom>      
-          <S.Btn>공유하기</S.Btn>
+          <S.Btn onClick={copyLink}>공유하기</S.Btn>
         <S.Btn onClick={() => Router.push("/")}>다시하기</S.Btn>
         </S.Bottom>
       </S.Wrapper>
