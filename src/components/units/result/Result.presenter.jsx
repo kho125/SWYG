@@ -7,7 +7,9 @@ export default function ResultUI(props) {
 
   function Member() {
     let ko, en;
-    switch(JSON.parse(router.query.winner))
+    var query = router.query;
+    var winner = query.winner;
+    switch(winner)
     {
       case 0: ko = '하니'; en = 'hani';
       break

@@ -6,14 +6,20 @@ import * as S from "../../../../styles/ChatStyles";
 export default function NarrationStart1UI(props) {
 
   const router = useRouter();
-
   const [step, setStep] = useState(0);      // question step
   const [select, setSelect] = useState(-1); // selected question index
 
   const selectChat = (index) => {
-    setStep(++step);
+    setStep(step+1);
     setSelect(index);
   }
+
+
+  // const scrollRef = useRef();
+  // useEffect(() => {
+  //   scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  // }, [step])
+
 
   return (
     <>

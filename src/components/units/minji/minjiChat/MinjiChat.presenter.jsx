@@ -55,7 +55,7 @@ export default function MinjiChatUI(props) {
 
   function Question(index) {
     return (
-      <>
+      <div key={index}>
         <S.ChatWrapperLeft>
           <S.ChatWrapper>
             <S.SmallAvatarImage src="/images/chat/minji.svg" />
@@ -89,7 +89,7 @@ export default function MinjiChatUI(props) {
             </S.ChatRight>
           }
         </S.ChatWrapperRight>
-      </>
+      </div>
     )
 
   }
