@@ -1,12 +1,11 @@
 import { useRouter } from "next/router";
-import NarrationStartUI from "./Doctor.presenter";
+import NarrationStartUI from "./NarrationStart.presenter";
 
 export default function NarrationStart() {
   const router = useRouter();
 
   const onClickMove = () => {
-    localStorage.clear();
-    router.push("/");
+    router.push("/doctor");
   };
 
   return <NarrationStartUI onClickMove={onClickMove} />;

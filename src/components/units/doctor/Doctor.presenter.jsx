@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 // import * as S from "../../../../styles/ChatStyles";
 import * as S from "./Doctor.styles"
 
-export default function NarrationStart1UI(props) {
+export default function NarrationStartUI(props) {
 
   const router = useRouter();
   const [step, setStep] = useState(0);      // question step

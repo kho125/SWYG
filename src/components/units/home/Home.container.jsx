@@ -5,7 +5,7 @@ export default function Home() {
   const router = useRouter();
 
   const onClickMove = () => {
-    router.push("/start1");
+    router.push("/start");
   };
 
   return <HomeUI onClickMove={onClickMove} />;

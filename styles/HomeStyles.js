@@ -28,7 +28,6 @@ export const Title = styled.div`
 `;
 
 export const Bottom = styled.div`
-
   padding-top: 50px;
   height: 30%;
   background-color: #d9d9d9;
@@ -40,19 +39,19 @@ export const Writer = styled.div`
 `;
 
 export const StartBtn = styled.div`
-margin: 0 20%;
-color: #000;
-padding: 10px;
-background-color: #6180ed;
-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 30px;
-white-space: pre-wrap;
-cursor: pointer;
-color: white;
+  margin: 0 20%;
+  color: #000;
+  padding: 10px;
+  background-color: #6180ed;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  white-space: pre-wrap;
+  cursor: pointer;
+  color: white;
 
-@media (hover:hover) {
-  :hover {
-      background-color:#01275c;
+  @media (hover: hover) {
+    :hover {
+      background-color: #01275c;
+    }
   }
-}
 `;
