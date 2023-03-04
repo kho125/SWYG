@@ -32,7 +32,7 @@ export default function Minji2ChatUI(props) {
     if(_select.length === 3)
     {
       let _score = JSON.parse(localStorage.getItem('minjiScore'));
-      for(let i = 0; i<_select.length; i++)
+      for(let i = 0; i < _select.length; i++)
       {
         _score = _score + _select[i];
       }

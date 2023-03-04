@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const Wrapper = styled.div`
   max-width: 500px;
   height: 100vh;
-  background-color:#f5f5f5
+  background-color: #f5f5f5;
   //background: linear-gradient(#ffff05, rgba(245, 249, 71, 0) 55%);
 `;
 
@@ -12,10 +12,10 @@ export const AvatarWrapper = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   height: 80px;
-  width:100%;
+  width: 100%;
   max-width: 500px;
   overflow: hidden;
   background-color: white;
@@ -38,28 +38,27 @@ export const Bg = styled.div`
   overflow-y: scroll;
   position: absolute;
   top: 80px;
-  bottom:80px;
-  left:0;
-  width:100%;
+  bottom: 80px;
+  left: 0;
+  width: 100%;
   max-width: 500px;
-  overflow-y:scroll;
+  overflow-y: scroll;
   padding: 10px;
 `;
 
 export const Bottom = styled.div`
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10%;
   background-color: #d9d9d9;
-  width:100%;
+  width: 100%;
   max-width: 500px;
   height: 10%;
   height: 80px;
   position: absolute;
-  left:0;
-  bottom:0;
+  left: 0;
+  bottom: 0;
 `;
 
 export const FirstBtn = styled.div`
@@ -104,9 +103,9 @@ export const ChatLeft = styled.div`
   background: #fff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0 30px 30px 30px;
-  white-space:pre-wrap;
+  white-space: pre-wrap;
 
-  animation: chatLeft .5s ease-in;
+  animation: chatLeft 0.5s ease-in;
 `;
 
 export const ChatWrapperRight = styled.div`
@@ -126,9 +125,9 @@ export const ChatRight = styled.div`
   background: #fff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px 0 30px 30px;
-  white-space:pre-wrap;
+  white-space: pre-wrap;
 
-  animation: chatRight .5s ease-in;
+  animation: chatRight 0.5s ease-in;
 `;
 
 export const ChatBtn = styled.div`
@@ -146,11 +145,11 @@ export const ChatBtn = styled.div`
   cursor: pointer;
   color: white;
 
-  animation: chatRight .5s ease-in;
+  animation: chatRight 0.5s ease-in;
 
-  @media (hover:hover) {
+  @media (hover: hover) {
     :hover {
-        background-color:#01275c;
+      background-color: #01275c;
     }
   }
 `;

@@ -39,8 +39,11 @@ export const Bg = styled.div`
   left: 0;
   width: 100%;
   max-width: 500px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   padding: 10px;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const Bottom = styled.div`
