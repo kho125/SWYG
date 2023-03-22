@@ -1,5 +1,5 @@
-import * as S from "../../../../../styles/StartStyles";
-// import * as S from "./HyeinStart.styles"
+// import * as S from "../../../../../styles/StartStyles";
+import * as S from "./HyeinStart.styles"
 
 export default function HyeinStartUI(props) {
   return (

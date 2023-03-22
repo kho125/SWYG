@@ -1,5 +1,5 @@
-import * as S from "../../../../../styles/StartStyles";
-// import * as S from "./DanielStart.styles"
+// import * as S from "../../../../../styles/StartStyles";
+import * as S from "./DanielStart.styles"
 
 export default function HarinStartUI(props) {
   return (

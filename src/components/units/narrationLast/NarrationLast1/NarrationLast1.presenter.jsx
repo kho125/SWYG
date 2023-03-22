@@ -1,5 +1,5 @@
-import * as S from "../../../../../styles/StartStyles";
-// import * as S from "./NarrationLast1.styles"
+// import * as S from "../../../../../styles/StartStyles";
+import * as S from "./NarrationLast1.styles"
 
 export default function NarrationLast1UI(props) {
   return (

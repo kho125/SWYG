@@ -1,5 +1,5 @@
-import * as S from "../../../../../styles/StartStyles";
-// import * as S from "./HaniStart.styles"
+// import * as S from "../../../../../styles/StartStyles";
+import * as S from "./HaniStart.styles"
 
 export default function HaniStartUI(props) {
   return (
