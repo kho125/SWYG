@@ -1,5 +1,5 @@
-// import * as S from "../../../../styles/ResultStyles";
-import * as S from "./Result.styles"
+import * as S from "../../../../styles/ResultStyles";
+// import * as S from "./Result.styles"
 
 import Router, { useRouter } from "next/router";
 

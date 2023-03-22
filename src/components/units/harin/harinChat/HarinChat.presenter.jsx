@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-// import * as S from "../../../../../styles/ChatStyles";
-import * as S from "./HarinChat.styles"
+import * as S from "../../../../../styles/ChatStyles";
+// import * as S from "./HarinChat.styles"
 import { harinQuestion } from "../../../../Script";
 
 export default function HarinChatUI(props) {

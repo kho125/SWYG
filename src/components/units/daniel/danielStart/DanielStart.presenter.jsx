@@ -1,5 +1,5 @@
-// import * as S from "../../../../../styles/StartStyles";
-import * as S from "./DanielStart.styles"
+import * as S from "../../../../../styles/StartStyles";
+// import * as S from "./DanielStart.styles"
 
 export default function HarinStartUI(props) {
   return (
@@ -7,7 +7,7 @@ export default function HarinStartUI(props) {
       <S.Wrapper>
         <S.Bg>
           <S.NarrationBox>
-            <p>점점 나도 모르게 빠져들 뻔 했네,,</p> 
+            <p>점점 나도 모르게 빠져들 뻔 했네..</p> 
             <p>다음은 다니엘씨.</p>
           </S.NarrationBox>
           <S.StartBtn onClick={props.onClickMove}>계속</S.StartBtn>

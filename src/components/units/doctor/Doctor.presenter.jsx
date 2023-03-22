@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-// import * as S from "../../../../styles/ChatStyles";
-import * as S from "./Doctor.styles"
+import * as S from "../../../../styles/ChatStyles";
+// import * as S from "./Doctor.styles"
 
 export default function NarrationStartUI(props) {
 
@@ -42,8 +42,8 @@ export default function NarrationStartUI(props) {
           </S.ChatWrapperLeft>
           <S.ChatWrapperRight>
             {step === 0 && <S.ChatRight>당신의 대답은?</S.ChatRight>}
-            {step === 0 ? <S.ChatBtn onClick={() => selectChat(0)}>무슨,,, 환자요?</S.ChatBtn> : select === 0 && <S.ChatRight>무슨,,, 환자요?</S.ChatRight>}
-            {step === 0 ? <S.ChatBtn onClick={() => selectChat(1)}>제가 상담사라구요,,,?</S.ChatBtn> : select === 1 && <S.ChatRight>제가 상담사라구요,,,?</S.ChatRight>}
+            {step === 0 ? <S.ChatBtn onClick={() => selectChat(0)}>무슨.. 환자요?</S.ChatBtn> : select === 0 && <S.ChatRight>무슨.. 환자요?</S.ChatRight>}
+            {step === 0 ? <S.ChatBtn onClick={() => selectChat(1)}>제가 상담사라구요?</S.ChatBtn> : select === 1 && <S.ChatRight>제가 상담사라구요?</S.ChatRight>}
           </S.ChatWrapperRight>
           {step > 0 &&
             <S.ChatWrapperLeft>
@@ -61,7 +61,7 @@ export default function NarrationStartUI(props) {
           {step > 0 &&
             <S.ChatWrapperRight>
               {step === 1 && <S.ChatRight>당신의 대답은?</S.ChatRight>}
-              {step === 1 && <S.ChatBtn onClick={() => router.push("/hani/haniStart")}>네 알겠습니다,,,</S.ChatBtn>}
+              {step === 1 && <S.ChatBtn onClick={() => router.push("/hani/haniStart")}>네 알겠습니다..</S.ChatBtn>}
               {step === 1 && <S.ChatBtn onClick={() => router.push("/hani/haniStart")}>뭐라구요? 갑자기요?</S.ChatBtn>}
             </S.ChatWrapperRight>
           }

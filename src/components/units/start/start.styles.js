@@ -13,7 +13,7 @@ export const Bg = styled.div`
 `;
 
 export const NarrationBox = styled.div`
-  margin: 0 auto 6px;
+  margin: 0 auto 16px;
   /* padding: 60px 33px; */
   padding: 22px 33px;
   width: 327px;
@@ -31,7 +31,7 @@ export const NarrationBox = styled.div`
 `;
 
 export const Bottom = styled.div`
-  padding-top: 36px;
+  padding-top: 21px;
   height: 74.5%; // 수정
   background: linear-gradient(#fff 60%, #478ef9);
 `;
